@@ -1,7 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
 from PIL import Image
-from duckduckgo_search import DDGS
 from fpdf import FPDF
 from dotenv import load_dotenv
 import os, io, re, datetime, unicodedata
@@ -737,4 +736,5 @@ Instructions:
             st.download_button("📝 Export as TXT",
                                data=chat_txt if st.session_state.chat_history else "",
                                file_name="medihelp_chat.txt",
+
                                mime="text/plain", use_container_width=True)
